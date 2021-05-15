@@ -11,6 +11,8 @@
     <title>Subscriber Sign-Up</title>
     <link rel="stylesheet" href="AllSubscribers.css">
 </head>
+
+
 <body>
     <div class="header">
         All Subscribers
@@ -22,33 +24,45 @@
 
     <!--<form th:action="@(/showSubscribers)" method="get">-->
     <!--This search bar does nothing-->
-    <div class="search">
-        <form class="searchBar">
-            <input id="txtSearch" type="text" name="keyword">
-            <button type="submit">Search</button>
-        </form>
+    <div class="row search" align="center">
+        <div class="col"></div>
+        <div class="col">
+            <div class="input-group">
+                    <input class="form-control" id="txtSearch" type="text" name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+            </div>
+        </div>
+        <div class="col"></div>
     </div>
 
-    <table class="table table-responsive">
-        <thead class="thead-light">
-            <tr>
-                <th> User ID</th>
-                <th>User Name</th>
-                <th> First Name</th>
-                <th>Last Name</th>
-                <th>Sign-Up Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="subscriber : ${subscribers}">
-                <td><span th:text="${subscriber.id}">User ID</span></td>
-                <td><span th:text="${subscriber.userName}">User Name</span></td>
-                <td><span th:text="${subscriber.firstName}">First Name</span></td>
-                <td><span th:text="${subscriber.lastName}">Last Name</span></td>
-                <td><span th:text="${subscriber.signedUp}">Sign-Up Date</span></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row table">
+        <div class="col"></div>
+        <div class="col-lg-auto">
+            <table class="table table-responsive table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th> User ID</th>
+                        <th>User Name</th>
+                        <th> First Name</th>
+                        <th>Last Name</th>
+                        <th>Sign-Up Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="subscriber : ${subscribers}">
+                        <td><span th:text="${subscriber.id}">User ID</span></td>
+                        <td><span th:text="${subscriber.userName}">User Name</span></td>
+                        <td><span th:text="${subscriber.firstName}">First Name</span></td>
+                        <td><span th:text="${subscriber.lastName}">Last Name</span></td>
+                        <td><span th:text="${subscriber.signedUp}">Sign-Up Date</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
 
 
 

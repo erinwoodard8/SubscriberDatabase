@@ -11,7 +11,7 @@
 </head>
 <body>
     <h3>Subscriber Sign-up Form</h3>
-    <p>Thank you for signing up!</p>
+    <p>Thank you for signing up <span th:text="${firstName}"></span></p>
     <h4>Subscriber Info:</h4>
     <table class="table table-responsive table-bordered table-striped">
         <thead>
@@ -24,9 +24,9 @@
         </thead>
         <tbody>
 
-            <td><span th:text="${userName}">User Name</span></td>
-            <td><span th:text="${firstName}">First Name</span></td>
-            <td><span th:text="${lastName}">Last Name</span></td>
+            <td><span th:text="${userName}"></span></td>
+            <td><span th:text="${firstName}"></span></td>
+            <td><span th:text="${lastName}"></span></td>
 
         </tbody>
     </table>

@@ -4,6 +4,7 @@
    display: block;
    font-size: 56px;
    margin: auto;
+   margin-top: 100px;
    text-align: center;
 
 }
@@ -27,7 +28,8 @@
     margin-bottom: 50px;
 }
 .usernameInput {
-    width: 600px;
+    width: 400px;
+
 }
 
 .submitButton {
